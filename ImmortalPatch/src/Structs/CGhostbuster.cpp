@@ -3,6 +3,15 @@
 #include "Offsets.h"  
 #include "../main.h"  
 
+CGhostbuster* flinch(CGhostbuster* actor)
+{
+    using flinch_t = CGhostbuster*(*)(CGhostbuster*);
+    static flinch_t flinch_Func = reinterpret_cast<flinch_t>(gameBase + Offsets::flinch);
+	return flinch_Func(actor);
+}
+
+
+/*
 CGhostbuster* getLocalPlayer()
 {
     CGhostbuster* playerSteam =
@@ -25,8 +34,6 @@ CGhostbuster* getLocalPlayer()
     return playerSteam;
 }
 
-
-/*
 CGhostbuster* GetPosition(CGhostbuster* instance)  
 {  
    if (instance)  

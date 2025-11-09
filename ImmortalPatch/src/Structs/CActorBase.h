@@ -4,7 +4,7 @@
 
 struct CActorBase
 {
-	// fill with actual fields if known, or keep opaque but use pointers only
+	//placeholder :)
 };
 
 CActorBase* enable(CActorBase* actor, bool flag);

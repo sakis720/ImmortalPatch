@@ -3,9 +3,10 @@
 #include "Offsets.h"
 #include "./Structs/CGhostbuster.h"
 #include "./Structs/CActorBase.h"
-#include "main.h"
+#include "./Structs/CActor.h"
 #include "./Structs/Types.h"
 #include "./Enums/EHud.h"
+#include "main.h"
 
 
 void DisplayText(int EHudMessage, const char* text, float duration)
@@ -28,12 +29,6 @@ void TestFunc()
     {
         if (GetAsyncKeyState(VK_F1) & 1)
         {
-            CGhostbuster* player = getLocalPlayer();
-
-			Vector3 playerPos = { player->posX, player->posY, player->posZ };
-			Vector3 orient = { 90.0f };
-
-			warpTo(reinterpret_cast<CActorBase*>(player), playerPos, orient);
         }
     }
 }

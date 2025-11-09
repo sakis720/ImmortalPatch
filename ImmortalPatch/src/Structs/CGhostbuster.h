@@ -33,3 +33,4 @@ struct CGhostbuster
 #pragma pack(pop)
 
 CGhostbuster* getLocalPlayer();
+CGhostbuster* flinch(CGhostbuster* actor);

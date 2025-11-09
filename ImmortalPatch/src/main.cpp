@@ -3,6 +3,7 @@
 #include "main.h"
 #include "SaveFolderFix.h"
 #include "Offsets.h"
+#include "../src/Structs/DanteVirtualMachine.h"
 
 bool HaveConsole = true;
 bool runprogram = true;
@@ -11,6 +12,20 @@ char* gameBase = nullptr;
 
 DWORD WINAPI DLLAttach(HMODULE hModule)
 {
+    if (!HookManager::initialize()) {
+        MessageBoxA(NULL, "Failed to initialize MinHook.", "Error", MB_OK | MB_ICONERROR);
+        return 1;
+    }
+
+    void* targetFunction = reinterpret_cast<void*>(
+        reinterpret_cast<uintptr_t>(GetModuleHandle(NULL)) + Offsets::exportGlobalVariable
+        );
+
+    if (!HookManager::createAndEnableHook(targetFunction)) {
+        HookManager::cleanup(nullptr);
+        return 1;
+    }
+
     if (HaveConsole)
     {
         // Allocate console
@@ -40,7 +55,6 @@ DWORD WINAPI DLLAttach(HMODULE hModule)
 
     gameBase = (char*)GetModuleHandle(NULL);
 
-    //TestFunc();
 	SaveFix::CreateSaveFolder();
 
     return 1;

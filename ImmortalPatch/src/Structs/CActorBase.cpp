@@ -1,5 +1,4 @@
 #include <iostream>  
-#include "CGhostbuster.h"  
 #include "CActorBase.h"  
 #include "Offsets.h"  
 #include "../main.h"  
