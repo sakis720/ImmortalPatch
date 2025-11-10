@@ -54,6 +54,9 @@
     <ClCompile Include="src\Structs\DanteVirtualMachine.cpp">
       <Filter>Source Files\Structs</Filter>
     </ClCompile>
+    <ClCompile Include="src\Structs\CGame.cpp">
+      <Filter>Source Files\Structs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\SaveFolderFix.h">
@@ -81,6 +84,9 @@
       <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="src\Structs\DanteVirtualMachine.h">
+      <Filter>Header Files\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Structs\CGame.h">
       <Filter>Header Files\Structs</Filter>
     </ClInclude>
   </ItemGroup>

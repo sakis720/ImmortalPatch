@@ -30,10 +30,18 @@ namespace CGhostbuster
 
         float posX;                 // 0x0054
         float posY;                 // 0x0058
-        float posZ;                 // 0x005C
+        float posZ;
+        // 0x005C
     };
 #pragma pack(pop)
 
     CGhostbuster* getLocalPlayer();
     CGhostbuster* flinch(CGhostbuster* actor);
+    void getGhostbusters(char* Buffer, __int64 adr1);
 }
+
+extern CGhostbuster::CGhostbuster* egon;
+extern CGhostbuster::CGhostbuster* winston;
+extern CGhostbuster::CGhostbuster* venkman;
+extern CGhostbuster::CGhostbuster* ray;
+extern CGhostbuster::CGhostbuster* localPlayer;

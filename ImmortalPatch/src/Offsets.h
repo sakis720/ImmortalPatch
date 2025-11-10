@@ -11,6 +11,7 @@ namespace Offsets //Thanks to Malte0641 for providing most of the offsets!
 {
 #if STEAM_VER
     static constexpr const uintptr_t gGameBase = 0x23229C0;
+    static constexpr const uintptr_t CGame = 0xDCF680;
     static constexpr const uintptr_t findActorByName = 0x2DB760;
     static constexpr const uintptr_t exportGlobalVariable = 0x2CED00;
     static constexpr const uintptr_t startTalking = 0x75BB0;

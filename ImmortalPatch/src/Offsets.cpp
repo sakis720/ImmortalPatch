@@ -4,6 +4,7 @@
 #include "./Structs/CGhostbuster.h"
 #include "./Structs/CActorBase.h"
 #include "./Structs/CActor.h"
+#include "./Structs/CGame.h"
 #include "./Structs/DanteVirtualMachine.h"
 #include "./Structs/Types.h"
 #include "./Enums/EHud.h"
@@ -22,6 +23,10 @@ void TestFunc()
     {
         if (GetAsyncKeyState(VK_F1) & 1)
         {
+			CActorBase::enable((CActorBase::CActorBase*)localPlayer, false);
+			CActorBase::enable((CActorBase::CActorBase*)ray, false);
+			CActorBase::enable((CActorBase::CActorBase*)venkman, false);
+			CActorBase::enable((CActorBase::CActorBase*)egon, false);
 		}
     }
 }

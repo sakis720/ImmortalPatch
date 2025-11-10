@@ -3,6 +3,7 @@
 #include "../main.h"  
 #include "../include/MinHook/include/MinHook.h"
 #include "DanteVirtualMachine.h"
+#include "CGhostbuster.h"
 
 //Copied code from IE17
 bool DEBUG_MODE = false;
@@ -30,9 +31,14 @@ void __stdcall HookedFunction(char* buffer, __int64 adr1, __int64 adr2, __int64 
             return;
         }
     }
+    CGhostbuster::getGhostbusters(buffer, adr1);
 
     if (exportGlobalVariable) {
         exportGlobalVariable(buffer, adr1, adr2, adr3);
+    }
+    else
+    {
+		std::cout << "Error: Original function pointer is null!" << std::endl;
     }
 }
 

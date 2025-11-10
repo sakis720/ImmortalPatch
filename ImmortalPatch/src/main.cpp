@@ -4,6 +4,7 @@
 #include "SaveFolderFix.h"
 #include "Offsets.h"
 #include "../src/Structs/DanteVirtualMachine.h"
+#include <thread>
 
 bool HaveConsole = true;
 bool runprogram = true;
