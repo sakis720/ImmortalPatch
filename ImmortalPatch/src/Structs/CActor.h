@@ -2,9 +2,12 @@
 #include <cstdint>
 #include "Types.h"
 
-struct CActor
+namespace CActor
 {
-	//placeholder :)
-};
+	struct CActor
+	{
+		//placeholder :)
+	};
 
-CActor* createActor(const char* actor, Vector3 wPos);
+	CActor* createActor(const char* actor, Vector3 wPos);
+}

@@ -2,20 +2,25 @@
 #include <cstdint>
 #include "Types.h"
 
-struct DanteProgram
+namespace Dante
 {
-	char name[64];
-	char parentProgramName[64];
-	int programIndex;
-	int vmCodeAddress;
-	int vmCodeSize;
-	int vmDataAddress;
-	int vmDataSize;
-	int stringLiteralCount;
-	//CDialogDatabase* dialogDatabase;
-	//DanteDestructorStackEntry destructorStackList[256];
-	int destructorStackSize;
-};
+	struct DanteProgram
+	{
+		char name[64];
+		char parentProgramName[64];
+		int programIndex;
+		int vmCodeAddress;
+		int vmCodeSize;
+		int vmDataAddress;
+		int vmDataSize;
+		int stringLiteralCount;
+		//CDialogDatabase* dialogDatabase;
+		//DanteDestructorStackEntry destructorStackList[256];
+		int destructorStackSize;
+	};
+
+	void displayMessage(int EHudMessage, const char* text, float duration);
+}
 
 extern bool DEBUG_MODE;
 

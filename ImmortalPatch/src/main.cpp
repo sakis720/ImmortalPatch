@@ -55,6 +55,7 @@ DWORD WINAPI DLLAttach(HMODULE hModule)
 
     gameBase = (char*)GetModuleHandle(NULL);
 
+    TestFunc();
 	SaveFix::CreateSaveFolder();
 
     return 1;

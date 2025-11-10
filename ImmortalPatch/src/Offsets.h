@@ -2,7 +2,6 @@
 #include <iostream>
 #include "./Structs/Types.h"
 
-void DisplayText(int EHudMessage, const char* text, float duration);
 void AddLight(Vector3 pos, float radius, Vector3 rgb, float intensity, float duration, float rampUp, float rampDown);
 
 void TestFunc();

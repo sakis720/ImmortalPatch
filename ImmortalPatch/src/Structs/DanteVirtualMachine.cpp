@@ -69,3 +69,13 @@ namespace HookManager {
         MH_Uninitialize();
     }
 }
+
+namespace Dante
+{
+    void displayMessage(int EHudMessage, const char* text, float duration)
+    {
+        using DisplayText_t = void(*)(int, const char*, float);
+        static DisplayText_t DisplayText_Func = reinterpret_cast<DisplayText_t>(gameBase + Offsets::DisplayText);
+        DisplayText_Func(EHudMessage, text, duration);
+    }
+}
