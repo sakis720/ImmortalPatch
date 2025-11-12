@@ -84,4 +84,15 @@ namespace Dante
         static DisplayText_t DisplayText_Func = reinterpret_cast<DisplayText_t>(gameBase + Offsets::DisplayText);
         DisplayText_Func(EHudMessage, text, duration);
     }
+
+    /*
+    CDialogDatabaseEntry* findDialogEntryByTag(const char* tag)
+    {
+        using findDBEntry_t = CDialogDatabaseEntry * (__fastcall*)(const char*);
+        static findDBEntry_t findDBEntry_Func = reinterpret_cast<findDBEntry_t>(gameBase + Offsets::findDBEntry);
+
+        if (!findDBEntry_Func) return nullptr;
+        return findDBEntry_Func(tag);
+    }
+    */
 }

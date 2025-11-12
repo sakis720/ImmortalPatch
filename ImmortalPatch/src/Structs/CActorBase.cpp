@@ -21,4 +21,11 @@ namespace CActorBase
         static warpTo_t warpTo_Func = reinterpret_cast<warpTo_t>(gameBase + Offsets::warpTo);
         return warpTo_Func(actor, pos, orient);
     }
+
+    bool isDead(CActorBase* actor)
+    {
+        using isDead_t = bool (*)(CActorBase*);
+        static isDead_t isDead_Func = reinterpret_cast<isDead_t>(gameBase + Offsets::isDead);
+        return isDead_Func(actor);
+    }
 }

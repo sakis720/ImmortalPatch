@@ -5,6 +5,7 @@
 #include "./Structs/CActorBase.h"
 #include "./Structs/CActor.h"
 #include "./Structs/CGame.h"
+#include "./Structs/CCharacter.h"
 #include "./Structs/DanteVirtualMachine.h"
 #include "./Structs/Types.h"
 #include "./Enums/EHud.h"
@@ -17,16 +18,29 @@ void AddLight(Vector3 pos, float radius, Vector3 rgb, float intensity, float dur
 	AddLight_Func(rgb.x, rgb.y, rgb.z, intensity, radius, &pos);
 }
 
+
 void TestFunc()
 {
     while (runprogram)
     {
         if (GetAsyncKeyState(VK_F1) & 1)
         {
-			CActorBase::enable((CActorBase::CActorBase*)localPlayer, false);
-			CActorBase::enable((CActorBase::CActorBase*)ray, false);
-			CActorBase::enable((CActorBase::CActorBase*)venkman, false);
-			CActorBase::enable((CActorBase::CActorBase*)egon, false);
-		}
+            /*
+            CDialogDatabaseEntry* entry = Dante::findDialogEntryByTag("diag_ray_gen_pu_026_a");
+            if (entry)
+            {
+                CGame::dbNarrative(*entry);
+				std::cout << "Found dialog entry: " << entry->tag.ptr << " - " << entry->text.ptr << std::endl;
+            }
+            else
+            {
+				std::cout << "Dialog entry not found." << std::endl;
+            }
+            //
+            CDialogDatabaseEntry* entry = (CDialogDatabaseEntry*)testemmit;
+            CGame::dbNarrative(*entry);
+            */
+            
+        }
     }
 }

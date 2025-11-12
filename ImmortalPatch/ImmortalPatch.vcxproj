@@ -161,6 +161,7 @@
     <ClCompile Include="src\SaveFolderFix.cpp" />
     <ClCompile Include="src\Structs\CActor.cpp" />
     <ClCompile Include="src\Structs\CActorBase.cpp" />
+    <ClCompile Include="src\Structs\CCharacter.cpp" />
     <ClCompile Include="src\Structs\CGame.cpp" />
     <ClCompile Include="src\Structs\CGhostbuster.cpp" />
     <ClCompile Include="src\Structs\DanteVirtualMachine.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="src\SaveFolderFix.h" />
     <ClInclude Include="src\Structs\CActor.h" />
     <ClInclude Include="src\Structs\CActorBase.h" />
+    <ClInclude Include="src\Structs\CCharacter.h" />
     <ClInclude Include="src\Structs\CGame.h" />
     <ClInclude Include="src\Structs\CGhostbuster.h" />
     <ClInclude Include="src\Structs\DanteVirtualMachine.h" />

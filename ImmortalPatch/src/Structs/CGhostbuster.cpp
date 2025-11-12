@@ -23,7 +23,7 @@ namespace CGhostbuster
     {
         CGhostbuster* localplayer =
             *reinterpret_cast<CGhostbuster**>(gameBase + Offsets::gLocalHero_STEAM);
-        //std::cout << "Local Player Address (Steam): " << localplayer << std::endl;
+        std::cout << "Local Player Address: " << localplayer << std::endl;
         return localplayer;
     }
 

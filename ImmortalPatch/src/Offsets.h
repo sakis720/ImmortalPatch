@@ -11,7 +11,9 @@ namespace Offsets //Thanks to Malte0641 for providing most of the offsets!
 {
 #if STEAM_VER
     static constexpr const uintptr_t gGameBase = 0x23229C0;
-    static constexpr const uintptr_t CGame = 0xDCF680;
+    static constexpr const uintptr_t gGame = 0xDCF680;
+    static constexpr const uintptr_t getOrient = 0x2BDB50;
+    static constexpr const uintptr_t enableActorsInsideMe = 0x4A67F0;
     static constexpr const uintptr_t findActorByName = 0x2DB760;
     static constexpr const uintptr_t exportGlobalVariable = 0x2CED00;
     static constexpr const uintptr_t startTalking = 0x75BB0;
@@ -24,6 +26,7 @@ namespace Offsets //Thanks to Malte0641 for providing most of the offsets!
     static constexpr const uintptr_t removeSlimeDecals = 0x30D620;
     static constexpr const uintptr_t dbNarrativeStop = 0x1F8410;
     static constexpr const uintptr_t dbNarrative = 0x1ECEB0;
+    static constexpr const uintptr_t findDBEntry = 0x2CF5E0;
     static constexpr const uintptr_t Singleton_newActor = 0x2C0D50;
     static constexpr const uintptr_t die = 0x3B27B0;
     static constexpr const uintptr_t blockHeroMovement = 0xED660;
@@ -102,10 +105,9 @@ namespace Offsets //Thanks to Malte0641 for providing most of the offsets!
     static constexpr const uintptr_t DisplayText = 0x2494A0;
     static constexpr const uintptr_t DisplayTextLegacy = 0x2A6C90;
 	static constexpr const uintptr_t gLocalHero_STEAM = 0x2322AD8;
-    static constexpr const uintptr_t gLocalHero_EGS = 0x227A888;
 
     static constexpr const uintptr_t money = 0x1CADCB0;
-    static constexpr const uintptr_t slew = 0x1F9D50;
+    static constexpr const uintptr_t static_slewModeChangedCallback = 0x1F9D50;
 /*
 #elif EGS_VER
     static constexpr const uintptr_t Init1 = 0x243740;
