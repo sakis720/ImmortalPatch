@@ -20,7 +20,7 @@ namespace Dante
 	};
 
 	void displayMessage(int EHudMessage, const char* text, float duration);
-	//CDialogDatabaseEntry* findDialogEntryByTag(const char* tag);
+	const CDialogDatabaseEntry* findDialogEntryByTag(const char* tag);
 }
 
 extern bool DEBUG_MODE;

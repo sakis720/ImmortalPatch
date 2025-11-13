@@ -11,4 +11,11 @@ namespace CCharacter
 		static setAnimation_t setAnimation_Func = reinterpret_cast<setAnimation_t>(gameBase + Offsets::setAnimation);
 		setAnimation_Func(actor, animationName, useSkelFileExit);
 	}
+
+	float startTalking(CCharacter* actor, const char* dbEntryTag)
+	{
+		using startTalking_t = float (*)(CCharacter*, const char*);
+		static startTalking_t startTalking_Func = reinterpret_cast<startTalking_t>(gameBase + Offsets::startTalking);
+		return startTalking_Func(actor, dbEntryTag);
+	}
 }

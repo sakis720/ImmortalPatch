@@ -85,14 +85,15 @@ namespace Dante
         DisplayText_Func(EHudMessage, text, duration);
     }
 
-    /*
-    CDialogDatabaseEntry* findDialogEntryByTag(const char* tag)
+    
+    const CDialogDatabaseEntry* findDialogEntryByTag(const char* tag)
     {
-        using findDBEntry_t = CDialogDatabaseEntry * (__fastcall*)(const char*);
+        using findDBEntry_t = const CDialogDatabaseEntry * (__fastcall*)(const char*);
         static findDBEntry_t findDBEntry_Func = reinterpret_cast<findDBEntry_t>(gameBase + Offsets::findDBEntry);
 
         if (!findDBEntry_Func) return nullptr;
         return findDBEntry_Func(tag);
     }
-    */
+    
+    
 }

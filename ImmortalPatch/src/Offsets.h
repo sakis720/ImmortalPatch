@@ -27,6 +27,7 @@ namespace Offsets //Thanks to Malte0641 for providing most of the offsets!
     static constexpr const uintptr_t dbNarrativeStop = 0x1F8410;
     static constexpr const uintptr_t dbNarrative = 0x1ECEB0;
     static constexpr const uintptr_t findDBEntry = 0x2CF5E0;
+    static constexpr const uintptr_t DanteVMInstance = 0x222D41C;
     static constexpr const uintptr_t Singleton_newActor = 0x2C0D50;
     static constexpr const uintptr_t die = 0x3B27B0;
     static constexpr const uintptr_t blockHeroMovement = 0xED660;
@@ -105,9 +106,15 @@ namespace Offsets //Thanks to Malte0641 for providing most of the offsets!
     static constexpr const uintptr_t DisplayText = 0x2494A0;
     static constexpr const uintptr_t DisplayTextLegacy = 0x2A6C90;
 	static constexpr const uintptr_t gLocalHero_STEAM = 0x2322AD8;
-
     static constexpr const uintptr_t money = 0x1CADCB0;
     static constexpr const uintptr_t static_slewModeChangedCallback = 0x1F9D50;
+
+    //--------------CGameView--------------------
+    static constexpr const uintptr_t gMainView = 0xDCF988;
+    static constexpr const uintptr_t impactCamera = 0x1FF5B0;
+    static constexpr const uintptr_t shakeCamera = 0x1FF510;
+    static constexpr const uintptr_t setCameraModeOrbit = 0x1FF800;
+    static constexpr const uintptr_t resetCamera = 0x1FE7A0;
 /*
 #elif EGS_VER
     static constexpr const uintptr_t Init1 = 0x243740;
