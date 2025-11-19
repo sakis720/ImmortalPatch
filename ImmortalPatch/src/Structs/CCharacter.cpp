@@ -18,4 +18,12 @@ namespace CCharacter
 		static startTalking_t startTalking_Func = reinterpret_cast<startTalking_t>(gameBase + Offsets::startTalking);
 		return startTalking_Func(actor, dbEntryTag);
 	}
+	/*
+	int beginWalkTo(CCharacter* actor, SScriptWalkInfo* info, bool flushQueue)
+	{
+		using beginWalkTo_t = int (*)(CCharacter*, SScriptWalkInfo*, bool);
+		static beginWalkTo_t beginWalkTo_Func = reinterpret_cast<beginWalkTo_t>(gameBase + Offsets::beginWalkTo);
+		return beginWalkTo_Func(actor, info, flushQueue);
+	}
+	*/
 }

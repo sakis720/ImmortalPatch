@@ -56,6 +56,7 @@ namespace CGhostbuster
         localPlayer = getLocalPlayer();
     }
 
+
     /*
     CGhostbuster* GetPosition(CGhostbuster* instance)
     {

@@ -3,6 +3,7 @@
 #include "./Structs/Types.h"
 
 void AddLight(Vector3 pos, float radius, Vector3 rgb, float intensity, float duration, float rampUp, float rampDown);
+void* startEffect(const char* effectName, Vector3 pos, Vector3 orient);
 
 void TestFunc();
 
@@ -16,7 +17,6 @@ namespace Offsets //Thanks to Malte0641 for providing most of the offsets!
     static constexpr const uintptr_t enableActorsInsideMe = 0x4A67F0;
     static constexpr const uintptr_t findActorByName = 0x2DB760;
     static constexpr const uintptr_t exportGlobalVariable = 0x2CED00;
-    static constexpr const uintptr_t startTalking = 0x75BB0;
     static constexpr const uintptr_t startPreparedTalking = 0x75A00;
     static constexpr const uintptr_t setGhostbusterHeatlhState = 0xD0280;
     static constexpr const uintptr_t flinch = 0xD18B0;
@@ -69,7 +69,6 @@ namespace Offsets //Thanks to Malte0641 for providing most of the offsets!
     static constexpr const uintptr_t cacheSkeletalAnimationByName = 0x2D9AF0;
     static constexpr const uintptr_t enable = 0x2DA340;
     static constexpr const uintptr_t setProtonBeamMaxLength = 0x277A50;
-    static constexpr const uintptr_t setAnimation = 0x77440;
     static constexpr const uintptr_t detonate = 0x690F0;
     static constexpr const uintptr_t attachToActorTag = 0x2BEE80;
     static constexpr const uintptr_t setCurrentTeam = 0x15B20;
@@ -96,8 +95,8 @@ namespace Offsets //Thanks to Malte0641 for providing most of the offsets!
     static constexpr const uintptr_t setAllowDamageTally = 0x1F8160;
     static constexpr const uintptr_t fade = 0x1ECCA0;
     static constexpr const uintptr_t displaySplashScreen = 0x1ECD50;
-    static constexpr const uintptr_t CacheEffect = 0x35A380;
-    static constexpr const uintptr_t StartEffect = 0x35A730;
+    static constexpr const uintptr_t cacheEffect = 0x35A380;
+    static constexpr const uintptr_t startEffect = 0x35A730;
     static constexpr const uintptr_t CreateExplosion = 0x1E9170;
     static constexpr const uintptr_t SetGravity = 0x1ECC40;
     static constexpr const uintptr_t endGame = 0x1EC500;
@@ -109,12 +108,19 @@ namespace Offsets //Thanks to Malte0641 for providing most of the offsets!
     static constexpr const uintptr_t money = 0x1CADCB0;
     static constexpr const uintptr_t static_slewModeChangedCallback = 0x1F9D50;
 
+    //--------------CGhostbuster-----------------
+
     //--------------CGameView--------------------
     static constexpr const uintptr_t gMainView = 0xDCF988;
     static constexpr const uintptr_t impactCamera = 0x1FF5B0;
     static constexpr const uintptr_t shakeCamera = 0x1FF510;
     static constexpr const uintptr_t setCameraModeOrbit = 0x1FF800;
     static constexpr const uintptr_t resetCamera = 0x1FE7A0;
+
+    //--------------CGameView--------------------
+    static constexpr const uintptr_t setAnimation = 0x77440;
+    static constexpr const uintptr_t startTalking = 0x75BB0;
+    static constexpr const uintptr_t beginWalkTo = 0x7DBB0;
 /*
 #elif EGS_VER
     static constexpr const uintptr_t Init1 = 0x243740;
