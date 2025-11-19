@@ -67,32 +67,18 @@ void TestFunc()
     {
         if (GetAsyncKeyState(VK_F1) & 1)
         {
-            /*
-			const CDialogDatabaseEntry* findTag = Dante::findDialogEntryByTag("Diag_Egon_CEM_S_008");
-            if (findTag)
-            {
-				std::cout << "tag found: " << findTag->tag.ptr << " - " << findTag->text.ptr << std::endl;
-            }
-            else
-            {
-				std::cout << "tag not found" << std::endl;
-            }
-            
-            CDialogDatabaseEntry* entry = Dante::findDialogEntryByTag("diag_ray_gen_pu_026_a");
-            if (entry)
-            {
-                CGame::dbNarrative(*entry);
-				std::cout << "Found dialog entry: " << entry->tag.ptr << " - " << entry->text.ptr << std::endl;
-            }
-            else
-            {
-				std::cout << "Dialog entry not found." << std::endl;
-            }
-            //
-            CDialogDatabaseEntry* entry = (CDialogDatabaseEntry*)testemmit;
-            CGame::dbNarrative(*entry);
-            */
-            
+			SurvivalMode();
         }
     }
+}
+
+void SurvivalMode()
+{
+    /*
+    * Surival Mode (WIP)
+    * a very basic survival mode implementation
+    * TODO:
+    * Clear State
+    */
+
 }
