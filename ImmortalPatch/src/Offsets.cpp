@@ -67,18 +67,6 @@ void TestFunc()
     {
         if (GetAsyncKeyState(VK_F1) & 1)
         {
-			SurvivalMode();
         }
     }
-}
-
-void SurvivalMode()
-{
-    /*
-    * Surival Mode (WIP)
-    * a very basic survival mode implementation
-    * TODO:
-    * Clear State
-    */
-
 }
