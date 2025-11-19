@@ -37,5 +37,15 @@ namespace CGame
         static dbNarrative_t dbNarrative_Func = reinterpret_cast<dbNarrative_t>(gameBase + Offsets::dbNarrative);
 		dbNarrative_Func(dbEntry);
     }
+
+    void chainToLevel(const char* levelName, const char* checkpointName)
+    {
+        uintptr_t CGameOffset = Offsets::gGame;
+		CGame* CGameIn = *reinterpret_cast<CGame**>(gameBase + CGameOffset);
+
+        using chainToLevel_t = void(*)(CGame*, const char*, const char*);
+        static chainToLevel_t chainToLevel_Func = reinterpret_cast<chainToLevel_t>(gameBase + Offsets::chainToLevel);
+		chainToLevel_Func(CGameIn, levelName, checkpointName);
+    }
     
 }

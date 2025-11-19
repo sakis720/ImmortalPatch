@@ -66,4 +66,5 @@ namespace CGame
 	void enableDebug(bool enabled);
 	int slew();
 	void dbNarrative(CDialogDatabaseEntry dbEntry);
+	void chainToLevel(const char* levelName, const char* checkpointName);
 }

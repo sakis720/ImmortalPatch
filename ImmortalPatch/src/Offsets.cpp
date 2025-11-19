@@ -35,6 +35,13 @@ void* startEffect(const char* effectName, Vector3 pos, Vector3 orient)
     return startEffect_Func(effectName, pos, orient);
 }
 
+void fade(float opacity, float r, float g, float b, float duration)
+{
+    using fade_t = void(*)(float, float, float, float, float);
+    static fade_t fade_Func = reinterpret_cast<fade_t>(gameBase + Offsets::fade);
+	fade_Func(opacity, r, g, b, duration);
+}
+
 /*
 void dbSay(std::optional<CCharacter::CCharacter*> speaker, CDialogDatabaseEntry tagID, bool subtitle = false)
 {

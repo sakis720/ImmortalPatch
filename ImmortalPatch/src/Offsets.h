@@ -4,6 +4,7 @@
 
 void AddLight(Vector3 pos, float radius, Vector3 rgb, float intensity, float duration, float rampUp, float rampDown);
 void* startEffect(const char* effectName, Vector3 pos, Vector3 orient);
+void fade(float opacity, float r, float g, float b, float duration);
 
 void TestFunc();
 
